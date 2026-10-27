@@ -1,0 +1,38 @@
+# Segredos: nunca enviar para o git
+.env
+.streamlit/secrets.toml
+
+# Ambiente virtual e arquivos gerados pelo Python
+.venv/
+__pycache__/
+*.pyc
+.pytest_cache/
+
+# Sistema operacional
+.DS_Store
+
+# Configuração local do Claude Code
+.claude/
+
+# Guias do Streamlit para assistentes de código (atalhos locais; não versionar)
+.agents/
+
+# Mais segredos e chaves: nunca versionar (o .env.example é a exceção, de propósito)
+.env.*
+!.env.example
+*.pem
+*.key
+*.p12
+secrets.toml
+
+# Registros, relatórios de teste e arquivos de editores
+*.log
+.coverage
+htmlcov/
+.idea/
+.vscode/
+*.swp
+
+# Vídeo de apresentação: ambiente separado e fontes convertidas (gerados; veja apresentacao/LEIA-ME.md)
+.venv-video/
+apresentacao/fontes/

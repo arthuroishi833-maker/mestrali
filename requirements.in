@@ -1,0 +1,8 @@
+# Dependências que o app usa (edite ESTE arquivo, não o requirements.txt).
+# Depois de editar, gere de novo o requirements.txt com versões fixadas:
+#   uv pip compile requirements.in -o requirements.txt
+streamlit        # interface web
+supabase         # login e banco de dados
+fpdf2            # geração do PDF
+python-dotenv    # lê o arquivo .env quando roda no seu computador
+dnspython        # confere se o domínio do e-mail tem servidor de e-mail

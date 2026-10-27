@@ -1,0 +1,7 @@
+# Dependências só para desenvolver e testar (não vão para o servidor).
+# Gerar de novo:  uv pip compile requirements-dev.in -o requirements-dev.txt
+-r requirements.in
+pytest           # testes automáticos
+pypdf            # lê o texto do PDF gerado, nos testes
+pgserver         # PostgreSQL local descartável, para testar os arquivos SQL
+pip-audit        # procura falhas de segurança conhecidas nas bibliotecas

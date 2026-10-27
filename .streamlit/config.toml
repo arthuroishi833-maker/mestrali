@@ -1,0 +1,51 @@
+# Configuração do Streamlit para este projeto (pode ir para o git: não tem segredo).
+# Depois de alterar este arquivo, pare o app (Ctrl+C) e rode de novo.
+
+[theme]
+# Tema sempre claro: melhor leitura ao ar livre, sob sol forte.
+base = "light"
+primaryColor = "#0A58CA"              # azul: só em botões e ações principais
+backgroundColor = "#FFFFFF"
+secondaryBackgroundColor = "#F3F6FA"  # fundo dos campos e superfícies de apoio
+textColor = "#0F1B2D"                 # azul quase preto: contraste alto sobre branco
+greenColor = "#0E7A4B"                # confirmações
+redColor = "#B42318"                  # erros
+
+# Fontes. As duas já vêm DENTRO do Streamlit: nada é baixado de fora,
+# então não há pedido a servidores de fontes (ponto importante para a LGPD).
+font = "sans-serif"                   # Source Sans: textos, campos e botões
+headingFont = "serif"                 # Source Serif: títulos, com cara de documento
+baseFontSize = 17                     # um pouco maior que o padrão (16)
+# Tamanho e peso de cada nível de título (h1 a h6). O padrão do Streamlit é
+# grande demais para celular: um título de tela ocupava três linhas.
+headingFontSizes = ["2rem", "1.7rem", "1.22rem", "1.08rem", "1rem", "0.95rem"]
+headingFontWeights = [650, 650, 650, 600, 600, 600]
+
+baseRadius = "10px"                   # cantos dos campos e avisos
+buttonRadius = "12px"                 # cantos dos botões
+showWidgetBorder = true               # campos com borda sempre visível (leitura sob sol)
+borderColor = "#7F93AB"               # cor dessa borda: contraste 3,3:1 sobre branco
+
+[client]
+# Esconde o menu de desenvolvedor (onde dá para trocar para o tema escuro).
+toolbarMode = "minimal"
+# Em caso de erro inesperado, o usuário não vê detalhes internos do código.
+# O erro completo continua aparecendo no terminal onde o app está rodando.
+showErrorDetails = "none"
+
+[browser]
+# Não envia estatísticas de uso para o Streamlit.
+gatherUsageStats = false
+
+[server]
+# Proteções que já vêm ligadas por padrão; ficam escritas aqui para
+# ninguém desligar sem perceber.
+enableXsrfProtection = true   # bloqueia pedidos forjados por outros sites (CSRF)
+enableCORS = true             # só o próprio endereço do app pode chamar o servidor
+# Tamanho máximo de arquivo enviado (o logo), em MB. O padrão seria 200.
+# Quanto tempo o servidor guarda uma sessão cuja conexão caiu (padrão: 2 minutos).
+# No celular a conexão cai sempre que o técnico troca de aplicativo; com 30
+# minutos, ele volta de uma ligação e o orçamento que estava montando continua lá.
+disconnectedSessionTTL = 1800
+maxUploadSize = 5
+maxMessageSize = 50
